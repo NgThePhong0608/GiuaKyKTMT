@@ -24,7 +24,7 @@ def main():
     # chọn đối tượng để vẽ.
     draw = ImageDraw.Draw(image)
     # và các hình khác
-    draw.rectangle((27, 9, 57, 39), outline=0, fill=255)
+    draw.rectangle((22, 4, 62, 44), outline=0, fill=255)
     disp.image(image)
     disp.display()
     while True:
