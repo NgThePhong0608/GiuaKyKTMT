@@ -19,8 +19,7 @@ def main():
     disp.display()
     image = Image.new('1', (LCD.LCDWIDTH, LCD.LCDHEIGHT))
     draw = ImageDraw.Draw(image)
-    #draw.rectangle((20,10,60,40), outline=0, fill=255)
-    draw.ellipse((27, 9, 57, 39), outline=0, fill=(123, 123, 123))
+    draw.ellipse((22, 4, 62, 44), outline=0, fill=255)
 
     disp.image(image)
     disp.display()
