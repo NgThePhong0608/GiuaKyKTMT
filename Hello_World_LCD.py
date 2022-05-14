@@ -39,7 +39,7 @@ def main():
             draw.text((8, 30), string, font=font)
             # hien thi hinh anh
             disp.image(image)
-            print(chuoi)
+            print(string)
             disp.display()
             time.sleep(0.5)
 
