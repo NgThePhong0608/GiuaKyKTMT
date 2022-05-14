@@ -5,7 +5,6 @@ import time
 def main():
     # blue = 5, red = 22, green = 1/7
     RED = 22
-    GREEN = 7
     BLUE = 5
     BT1 = 14
 
@@ -13,12 +12,10 @@ def main():
 
     GPIO.setup(RED, GPIO.OUT)
     GPIO.setup(BLUE, GPIO.OUT)
-    GPIO.setup(GREEN, GPIO.OUT)
     GPIO.setup(BT1, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
     GPIO.output(RED, GPIO.LOW)
     GPIO.output(BLUE, GPIO.LOW)
-    GPIO.output(GREEN, GPIO.LOW)
 
     is_RED_on = True
 
