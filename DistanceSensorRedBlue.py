@@ -11,7 +11,6 @@ def main():
 
     RED = 22
     BLUE = 5
-    GREEN = 1
 
     global pulse_end
 
@@ -27,8 +26,6 @@ def main():
 
         print("Waiting For Sensor To Settle")
 
-        GPIO.output(GREEN, GPIO.HIGH)
-
         time.sleep(2)
         GPIO.output(TRIG, True)
         time.sleep(0.00001)
@@ -43,16 +40,15 @@ def main():
         distance = pulse_duration*17150
         distance = round(distance, 2)
 
-        if distance > 100:
+        if float(distance) > 100:
             print("ERROR, try again")
 
         else:
-            print("Distance: %scm" % distance)
-
-            if distance < 10:
+            print('Distance: ', distance)
+            if float(distance) < 10:
                 GPIO.output(RED, GPIO.HIGH)
                 GPIO.output(BLUE, GPIO.LOW)
-            if distance > 10:
+            if float(distance) > 10:
                 GPIO.output(BLUE, GPIO.HIGH)
                 GPIO.output(RED, GPIO.LOW)
 
